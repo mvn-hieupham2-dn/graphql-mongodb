@@ -11,7 +11,7 @@ import { Student } from './student/student.entity';
   imports: [
     TypeOrmModule.forRoot({
       type:'mongodb',
-      url:'mongodb://localhost/school',
+      url:'mongodb+srv://hieu2801:hieupro123@study.n4hvlca.mongodb.net/test',
       synchronize:true,
       useUnifiedTopology: true,
       entities:[
