@@ -6,12 +6,13 @@ import {TypeOrmModule} from '@nestjs/typeorm'
 import {Lesson} from './lesson/lesson.entity'
 import { StudentModule } from './student/student.module';
 import { Student } from './student/student.entity';
+require('dotenv').config()
 
 @Module({
   imports: [
     TypeOrmModule.forRoot({
       type:'mongodb',
-      url:'mongodb+srv://hieu2801:hieupro123@study.n4hvlca.mongodb.net/test',
+      url:process.env.mongo_URL,
       synchronize:true,
       useUnifiedTopology: true,
       entities:[
